@@ -280,17 +280,8 @@ To protect your cloud infrastructure, only expose necessary ports in your AWS EC
 
 ## 📸 Screenshots
 
-*(Add screenshots of your running application and AWS EC2 instance here for your portfolio!)*
+![Task Manager Web Application Preview](screenshots/app_preview.png)
 
-```text
-+-------------------------------------------------------------------+
-|                     [ Web Application Screenshot ]                 |
-|                                                                   |
-|   Add Task Form                  Task Overview Cards              |
-|   - Title Input                  - Total: 3                       |
-|   - Description Area             - Pending: 2  Completed: 1      |
-+-------------------------------------------------------------------+
-```
 
 ---
 
