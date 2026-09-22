@@ -1,0 +1,30 @@
+# Environment variables (contains secrets)
+.env
+!.env.example
+
+# AWS / SSH Secrets
+*.pem
+*.key
+*.id_rsa
+aws-credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Docker / Logs
+*.log
+docker-data/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

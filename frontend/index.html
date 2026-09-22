@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | DevOps 2-Tier App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-badge">DevOps Showcase</div>
+            <h1>Task Manager</h1>
+            <p class="subtitle">2-Tier Dockerized Web Application running on Nginx, Flask & MySQL</p>
+        </header>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Total Tasks</span>
+                <span class="stat-value" id="stat-total">0</span>
+            </div>
+            <div class="stat-card stat-pending">
+                <span class="stat-label">Pending</span>
+                <span class="stat-value" id="stat-pending">0</span>
+            </div>
+            <div class="stat-card stat-completed">
+                <span class="stat-label">Completed</span>
+                <span class="stat-value" id="stat-completed">0</span>
+            </div>
+        </div>
+
+        <!-- Main Grid Layout -->
+        <main class="main-layout">
+            <!-- Task Creation Form Section -->
+            <section class="card form-card">
+                <h2>Add New Task</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Task Title <span class="required">*</span></label>
+                        <input type="text" id="task-title" placeholder="e.g., Configure AWS EC2 Security Group" required maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-desc">Description</label>
+                        <textarea id="task-desc" rows="3" placeholder="Provide details or steps for this task..."></textarea>
+                    </div>
+                    <button type="submit" id="btn-submit" class="btn btn-primary">
+                        <span class="btn-icon">+</span> Add Task
+                    </button>
+                </form>
+            </section>
+
+            <!-- Task List Section -->
+            <section class="card list-card">
+                <div class="list-header">
+                    <h2>Task Overview</h2>
+                    <div class="filter-tabs">
+                        <button class="tab-btn active" data-filter="all">All</button>
+                        <button class="tab-btn" data-filter="pending">Pending</button>
+                        <button class="tab-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+
+                <div id="loading-spinner" class="spinner-container">
+                    <div class="spinner"></div>
+                    <p>Loading tasks from database...</p>
+                </div>
+
+                <div id="task-list" class="task-list">
+                    <!-- Tasks dynamically rendered here -->
+                </div>
+
+                <div id="empty-state" class="empty-state hidden">
+                    <div class="empty-icon">📋</div>
+                    <h3>No tasks found</h3>
+                    <p>Add a task using the form to get started!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Dockerized 2-Tier Architecture &bull; Flask REST API &bull; MySQL Database &bull; Nginx Web Server</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
