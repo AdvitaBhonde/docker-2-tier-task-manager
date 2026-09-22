@@ -298,6 +298,6 @@ To protect your cloud infrastructure, only expose necessary ports in your AWS EC
 
 Developed as a DevOps Portfolio Project.
 
-- **GitHub**: [github.com/your-username](https://github.com/your-username)
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+- **GitHub**: [AdvitaBhonde](https://github.com/AdvitaBhonde)
+- **LinkedIn**: [Advita Bhonde](https://linkedin.com/in/advita-bhonde)
 - **License**: MIT License
